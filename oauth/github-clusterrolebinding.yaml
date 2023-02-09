@@ -1,0 +1,13 @@
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: admins-from-github
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: ezlee
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
